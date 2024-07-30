@@ -1,0 +1,25 @@
+@import "abstracts/fuctions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilityies";
+
+@import "components/button";
+@import "components/composition";
+@import "components/feature-box";
+@import "components/card";
+
+@import "layout/header";
+@import "layout/grid";
+
+@import "pages/home";
+
+color-black * {
+  margin: 0;
+  padding: 0;
+  /* background-color: antiquewhite; */
+  box-sizing: border-box;
+}
