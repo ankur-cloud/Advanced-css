@@ -29,6 +29,6 @@
   }
   // compostion:hover  composition__photo:not(:hover)
   &:hover &__photo:not(:hover) {
-    transform: scale(0.95) translateY(0.5rem);
+    transform: scale(0.7) translateY(0.5rem);
   }
 }
