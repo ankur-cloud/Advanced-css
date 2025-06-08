@@ -1,19 +1,29 @@
 .u-center-text {
-  text-align: center;
+  text-align: center !important;
 }
 
 .u-mb-s {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem !important;
 }
 
 .u-mb-m {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
+  @include respond(tab-port) {
+    margin-bottom: 3rem;
+  }
 }
 
 .u-mb-lg {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
+  @include respond(tab-port) {
+    margin-bottom: 5rem;
+  }
 }
 
 .u-mt-lg {
-  margin-top: 8rem;
+  margin-top: 8rem !important;
+}
+
+.u-mt-huge {
+  margin-top: 10rem !important;
 }

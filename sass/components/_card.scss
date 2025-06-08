@@ -15,6 +15,7 @@
     width: 100%;
     transition: all 1s ease;
     // hides the back part of the emement
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem $color-box-shadow;
@@ -63,7 +64,8 @@
     // 00 origin 100% in x direction, 0 in y;
     --webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     &--1 {
       background-image: linear-gradient(
           to right bottom,
@@ -165,5 +167,48 @@
   &__price-value {
     font-size: 6rem;
     font-weight: 100;
+  }
+
+  // @include respond(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    // functionality
+
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem $color-box-shadow;
+    background-color: $color-white;
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0 100%);
+      }
+    }
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    //front side style
+    &__details {
+      // background-color: aqua;
+      padding: 1rem 3rem;
+    }
+    &__cta {
+      position: relative;
+      top: 0%;
+      left: 0%;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+    &__price-box {
+      margin-bottom: 2.5rem;
+    }
+
+    &__price-value {
+      font-size: 4rem;
+    }
   }
 }
